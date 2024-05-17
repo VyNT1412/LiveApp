@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/teal_700" 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Livestream App"
+        android:textSize="50dp"
+        android:textAlignment="center"
+        android:layout_marginBottom="10dp"
+        android:textStyle="bold"
+        android:fontFamily="serif"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/textlable"
+        android:textColor="@color/white"/>
+    <TextView
+        android:id="@+id/textlable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start new live or enter live ID to join"
+        android:textStyle="italic"
+        android:gravity="center"
+        android:padding="4dp"
+        android:textSize="18sp"
+        android:layout_above="@+id/bottom_layout"/>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_corner_top"
+    android:layout_alignParentBottom="true"
+    android:backgroundTint="@color/white"
+    android:orientation="vertical"
+    android:padding="64dp"
+    android:id="@+id/bottom_layout">
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Live Id"
+        android:backgroundTint="@color/teal_700"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="5"
+            android:textSize="18sp"
+            android:id="@+id/live_id_in"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Your name"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/teal_700"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textSize="18sp"
+            android:id="@+id/name_input"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Start new live"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:background="@drawable/rounded_corner_button"
+        android:id="@+id/btnStartLive"/>
+</LinearLayout>
+
+</RelativeLayout>
